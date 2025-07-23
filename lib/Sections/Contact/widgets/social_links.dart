@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 import '../../../constants.dart';
 
 class SocialLinks extends StatefulWidget {
@@ -25,29 +26,40 @@ class _SocialLinksState extends State<SocialLinks> {
       color: const Color(0xFF0A66C2),
     ),
     SocialLink(
-      name: 'Twitter',
-      url: ContactConstants.twitterUrl,
-      icon: Icons.alternate_email,
-      color: const Color(0xFF1DA1F2),
-    ),
-    SocialLink(
-      name: 'Instagram',
-      url: ContactConstants.instagramUrl,
-      icon: Icons.camera_alt,
-      color: const Color(0xFFE4405F),
+      name: 'Facebook',
+      url: ContactConstants.facebookUrl,
+      icon: Icons.facebook,
+      color: const Color(0xFF1877F2),
     ),
   ];
 
-  void _launchUrl(String url) {
-    // In a real app, you would use url_launcher package
-    // For now, just show a snackbar
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        content: Text('Opening $url'),
-        duration: const Duration(seconds: 2),
-        behavior: SnackBarBehavior.floating,
-      ),
-    );
+  void _launchUrl(String url) async {
+    final Uri uri = Uri.parse(url);
+    try {
+      if (await canLaunchUrl(uri)) {
+        await launchUrl(uri, mode: LaunchMode.externalApplication);
+      } else {
+        if (mounted) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              content: Text('Could not launch $url'),
+              duration: const Duration(seconds: 2),
+              behavior: SnackBarBehavior.floating,
+            ),
+          );
+        }
+      }
+    } catch (e) {
+      if (mounted) {
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            content: Text('Error opening $url'),
+            duration: const Duration(seconds: 2),
+            behavior: SnackBarBehavior.floating,
+          ),
+        );
+      }
+    }
   }
 
   @override

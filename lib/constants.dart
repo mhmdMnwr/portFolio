@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 // Responsive breakpoints
-final int mobileSize = 600;
+bool isMobile(BuildContext context) => MediaQuery.of(context).size.width < 768;
+bool isTablet(BuildContext context) =>
+    MediaQuery.of(context).size.width >= 768 &&
+    MediaQuery.of(context).size.width < 1024;
 
-bool isMobile(BuildContext context) =>
-    MediaQuery.of(context).size.width < mobileSize;
-
+// App Bar Constants
 // App Bar Constants
 class AppBarConstants {
   static const String appTitle = 'DevPortfolio';
@@ -20,7 +21,9 @@ class AppBarConstants {
 
 // Hero Section Constants
 class HeroConstants {
-  static const String studentBadgeText = 'Computer Science Student at ESI';
+  static const String name = 'Ameur Mohammed Menouer';
+  static const String studentBadgeText =
+      'Computer Science Student at ESI Sidi Bel Abbès';
   static const String mainTitle = 'Flutter Developer';
   static const String descriptionPart1 =
       'Learning to build beautiful mobile applications with ';
@@ -33,8 +36,8 @@ class HeroConstants {
   static const String downloadCvButton = 'Download CV';
 
   // Stats
-  static const String schoolStat = 'École Supérieure d\'Informatique';
-  static const String schoolStatMobile = 'École Supérieure\nd\'Informatique';
+  static const String schoolStat = 'ESI Sidi Bel Abbès';
+  static const String schoolStatMobile = 'ESI\nSidi Bel Abbès';
   static const String appsStat = '5 Apps Built';
   static const String experienceStat = '3 Years Learning';
 
@@ -66,7 +69,7 @@ class AboutConstants {
   // Journey Section
   static const String journeyTitle = 'My Journey';
   static const String journeyParagraph1 =
-      'I\'m a computer science student at École Supérieure d\'Informatique (ESI) with 3 years of experience in mobile development. I discovered my passion for Flutter development and have been dedicating my time to mastering cross-platform mobile applications.';
+      'I\'m a computer science student at École Supérieure d\'Informatique (ESI) Sidi Bel Abbès with 3 years of experience in mobile development. I discovered my passion for Flutter development and have been dedicating my time to mastering cross-platform mobile applications.';
   static const String journeyParagraph2 =
       'Through my studies and personal projects, I\'ve gained hands-on experience with MongoDB for backend development, allowing me to build complete mobile solutions from frontend to backend.';
   static const String journeyParagraph3 =
@@ -74,7 +77,8 @@ class AboutConstants {
 
   // Education Section
   static const String educationTitle = 'Education';
-  static const String schoolName = 'École Supérieure d\'Informatique';
+  static const String schoolName =
+      'École Supérieure d\'Informatique (ESI) Sidi Bel Abbès';
   static const String degreeType = 'Computer Science Degree';
   static const String enrollmentStatus = 'Currently Enrolled';
 
@@ -200,23 +204,12 @@ class ContactConstants {
   static const String subtitle =
       'Feel free to reach out if you\'re looking for a developer, have a question, or just want to connect.';
 
-  // Form fields
-  static const String formTitle = 'Send me a message';
-  static const String nameLabel = 'Your Name';
-  static const String nameHint = 'Enter your full name';
-  static const String emailLabel = 'Email Address';
-  static const String emailHint = 'Enter your email address';
-  static const String subjectLabel = 'Subject';
-  static const String subjectHint = 'What is this about?';
-  static const String messageLabel = 'Message';
-  static const String messageHint = 'Tell me about your project or question...';
-  static const String submitButton = 'Send Message';
-  static const String sendingButton = 'Sending...';
-
   // Contact Information
-  static const String email = 'mhmdmnwr@gmail.com';
-  static const String phone = '+213 123 456 789';
-  static const String location = 'Algiers, Algeria';
+  static const String name = 'Ameur Mohammed Menouer';
+  static const String email = 'mm.ameur@esi-sba.dz';
+  static const String phone = '+213 658 450 106';
+  static const String location = 'Mascara, Algeria';
+  static const String emailLabel = 'Email';
   static const String phoneLabel = 'Phone';
   static const String locationLabel = 'Location';
 
@@ -228,26 +221,13 @@ class ContactConstants {
   // Social media
   static const String socialTitle = 'Follow Me';
   static const String socialDescription = 'Let\'s connect on social platforms';
-  static const String linkedinUrl = 'https://linkedin.com/in/yourprofile';
+  static const String linkedinUrl = 'https://linkedin.com/in/mnwr-ameur';
   static const String githubUrl = 'https://github.com/mhmdMnwr';
-  static const String twitterUrl = 'https://twitter.com/yourprofile';
-  static const String instagramUrl = 'https://instagram.com/yourprofile';
+  static const String facebookUrl = 'https://facebook.com/menouer.ameur';
 
   // Availability
   static const String availabilityMessage =
       'Currently available for freelance work and open to discussing new opportunities.';
-
-  // Form validation
-  static const String nameValidation = 'Please enter your name';
-  static const String emailValidation = 'Please enter a valid email address';
-  static const String subjectValidation = 'Please enter a subject';
-  static const String messageValidation = 'Please enter your message';
-
-  // Success/Error Messages
-  static const String successMessage =
-      'Message sent successfully! I\'ll get back to you soon.';
-  static const String errorMessage =
-      'Failed to send message. Please try again.';
 }
 
 // Color Constants

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mnwr_portfolio/pages/project_detail_page.dart';
-import 'package:mnwr_portfolio/utils/project_assets.dart';
 import 'package:mnwr_portfolio/widgets/project_logo.dart';
 
 class ProjectCard extends StatefulWidget {
@@ -38,7 +37,7 @@ class _ProjectCardState extends State<ProjectCard> {
             duration: const Duration(milliseconds: 300),
             transform: Matrix4.identity()..scale(_isHovered ? 1.05 : 1.0),
             child: Container(
-              height: 420, // Increased height to accommodate image
+              height: 240, // Reduced height since no image
               decoration: BoxDecoration(
                 color: Colors.white.withOpacity(0.05),
                 borderRadius: BorderRadius.circular(20),
@@ -61,9 +60,6 @@ class _ProjectCardState extends State<ProjectCard> {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  // Project Preview Image
-                  _buildProjectImage(),
-
                   Padding(
                     padding: const EdgeInsets.all(24),
                     child: Column(
@@ -162,92 +158,5 @@ class _ProjectCardState extends State<ProjectCard> {
             ),
           ),
         ));
-  }
-
-  Widget _buildProjectImage() {
-    final mainImage = ProjectAssets.getMainScreenshot(widget.project['title']);
-
-    return Container(
-      height: 180,
-      width: double.infinity,
-      decoration: BoxDecoration(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
-        ),
-        gradient: LinearGradient(
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-          colors: [
-            widget.project['color'].withOpacity(0.3),
-            widget.project['color'].withOpacity(0.1),
-          ],
-        ),
-      ),
-      child: ClipRRect(
-        borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(20),
-          topRight: Radius.circular(20),
-        ),
-        child: Stack(
-          fit: StackFit.expand,
-          children: [
-            if (mainImage != null)
-              Image.asset(
-                mainImage,
-                fit: BoxFit.cover,
-                errorBuilder: (context, error, stackTrace) {
-                  return _buildImagePlaceholder();
-                },
-              )
-            else
-              _buildImagePlaceholder(),
-
-            // Gradient overlay
-            Container(
-              decoration: BoxDecoration(
-                gradient: LinearGradient(
-                  begin: Alignment.topCenter,
-                  end: Alignment.bottomCenter,
-                  colors: [
-                    Colors.transparent,
-                    widget.project['color'].withOpacity(0.3),
-                  ],
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
-  }
-
-  Widget _buildImagePlaceholder() {
-    return Container(
-      color: widget.project['color'].withOpacity(0.1),
-      child: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text(
-              widget.project['icon'],
-              style: TextStyle(
-                fontSize: 48,
-                color: widget.project['color'].withOpacity(0.7),
-              ),
-            ),
-            const SizedBox(height: 8),
-            Text(
-              'Preview',
-              style: TextStyle(
-                color: widget.project['color'].withOpacity(0.7),
-                fontSize: 16,
-                fontWeight: FontWeight.w500,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
   }
 }

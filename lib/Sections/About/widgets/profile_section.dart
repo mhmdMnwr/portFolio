@@ -40,7 +40,7 @@ class ProfileSection extends StatelessWidget {
 
         // Name and Title
         Text(
-          'Computer Science Student',
+          'Ameur Mohammed Menouer',
           style: TextStyle(
             color: Colors.white,
             fontSize: isMobile(context) ? 20 : 24,
