@@ -7,3 +7,4 @@ export 'project_technologies.dart';
 export 'project_screenshots.dart';
 export 'project_features.dart';
 export 'project_detail_content.dart';
+export 'project_image_gallery.dart';

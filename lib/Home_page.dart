@@ -4,6 +4,7 @@ import 'package:mnwr_portfolio/Sections/Hero/hero_section.dart';
 import 'package:mnwr_portfolio/Sections/About/about_section.dart';
 import 'package:mnwr_portfolio/Sections/Skills/skills_section.dart';
 import 'package:mnwr_portfolio/Sections/Projects/projects_section.dart';
+import 'package:mnwr_portfolio/Sections/Contact/contact_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -20,6 +21,7 @@ class _HomePageState extends State<HomePage> {
   final GlobalKey _aboutKey = GlobalKey();
   final GlobalKey _skillsKey = GlobalKey();
   final GlobalKey _projectsKey = GlobalKey();
+  final GlobalKey _contactKey = GlobalKey();
 
   void scrollToSection(String section) {
     GlobalKey targetKey;
@@ -36,6 +38,9 @@ class _HomePageState extends State<HomePage> {
         break;
       case 'Projects':
         targetKey = _projectsKey;
+        break;
+      case 'Contact':
+        targetKey = _contactKey;
         break;
       default:
         return;
@@ -69,7 +74,7 @@ class _HomePageState extends State<HomePage> {
             AboutSection(key: _aboutKey),
             SkillsSection(key: _skillsKey),
             ProjectsSection(key: _projectsKey),
-            // Add more sections here as needed
+            ContactSection(key: _contactKey),
           ],
         ),
       ),

@@ -194,6 +194,62 @@ class ProjectsConstants {
   ];
 }
 
+// Contact Section Constants
+class ContactConstants {
+  static const String sectionTitle = 'Get In Touch';
+  static const String subtitle =
+      'Feel free to reach out if you\'re looking for a developer, have a question, or just want to connect.';
+
+  // Form fields
+  static const String formTitle = 'Send me a message';
+  static const String nameLabel = 'Your Name';
+  static const String nameHint = 'Enter your full name';
+  static const String emailLabel = 'Email Address';
+  static const String emailHint = 'Enter your email address';
+  static const String subjectLabel = 'Subject';
+  static const String subjectHint = 'What is this about?';
+  static const String messageLabel = 'Message';
+  static const String messageHint = 'Tell me about your project or question...';
+  static const String submitButton = 'Send Message';
+  static const String sendingButton = 'Sending...';
+
+  // Contact Information
+  static const String email = 'mhmdmnwr@gmail.com';
+  static const String phone = '+213 123 456 789';
+  static const String location = 'Algiers, Algeria';
+  static const String phoneLabel = 'Phone';
+  static const String locationLabel = 'Location';
+
+  // Contact info section
+  static const String infoTitle = 'Contact Information';
+  static const String infoDescription =
+      'Feel free to get in touch with me. I am always open to discussing new opportunities.';
+
+  // Social media
+  static const String socialTitle = 'Follow Me';
+  static const String socialDescription = 'Let\'s connect on social platforms';
+  static const String linkedinUrl = 'https://linkedin.com/in/yourprofile';
+  static const String githubUrl = 'https://github.com/mhmdMnwr';
+  static const String twitterUrl = 'https://twitter.com/yourprofile';
+  static const String instagramUrl = 'https://instagram.com/yourprofile';
+
+  // Availability
+  static const String availabilityMessage =
+      'Currently available for freelance work and open to discussing new opportunities.';
+
+  // Form validation
+  static const String nameValidation = 'Please enter your name';
+  static const String emailValidation = 'Please enter a valid email address';
+  static const String subjectValidation = 'Please enter a subject';
+  static const String messageValidation = 'Please enter your message';
+
+  // Success/Error Messages
+  static const String successMessage =
+      'Message sent successfully! I\'ll get back to you soon.';
+  static const String errorMessage =
+      'Failed to send message. Please try again.';
+}
+
 // Color Constants
 class AppColors {
   // Gradient Colors
@@ -219,7 +275,12 @@ class AppColors {
   static const Color secondaryText = Color(0xFFBDBDBD); // Colors.grey[300]
   static const Color tertiaryText = Color(0xFF9E9E9E); // Colors.grey[400]
 
+  // Background Colors
+  static const Color background = Color(0xFF1a1a2e);
+  static const Color cardBackground = Color(0xFF16213e);
+
   // Accent Colors
+  static const Color accent = Colors.blue;
   static const Color blueAccent = Colors.blue;
   static const Color purpleAccent = Colors.purple;
   static const Color greenAccent = Colors.green;
