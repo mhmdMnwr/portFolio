@@ -13,7 +13,7 @@ class ProjectScreenshots extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final images = ProjectAssets.getProjectImages(project['title']);
-    
+
     if (images.isEmpty) {
       return const SizedBox.shrink();
     }
@@ -37,7 +37,7 @@ class ProjectScreenshots extends StatelessWidget {
 
   Widget _buildImageGrid(BuildContext context, List<String> images) {
     final crossAxisCount = isMobile(context) ? 2 : 3;
-    
+
     return GridView.builder(
       shrinkWrap: true,
       physics: const NeverScrollableScrollPhysics(),

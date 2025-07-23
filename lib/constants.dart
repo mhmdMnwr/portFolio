@@ -22,8 +22,7 @@ class AppBarConstants {
 // Hero Section Constants
 class HeroConstants {
   static const String name = 'Ameur Mohammed Menouer';
-  static const String studentBadgeText =
-      'Computer Science Student at ESI Sidi Bel Abbès';
+  static const String studentBadgeText = 'Computer Science Student at ESI SBA';
   static const String mainTitle = 'Flutter Developer';
   static const String descriptionPart1 =
       'Learning to build beautiful mobile applications with ';

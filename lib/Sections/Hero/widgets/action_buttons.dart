@@ -26,7 +26,7 @@ class ActionButtons extends StatelessWidget {
         onTap: () {
           // Navigate to projects section
           if (onNavigate != null) {
-            onNavigate!('projects');
+            onNavigate!('Projects');
           }
         },
         child: Container(

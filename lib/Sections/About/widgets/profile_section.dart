@@ -28,11 +28,36 @@ class ProfileSection extends StatelessWidget {
               ),
             ],
           ),
-          child: const Center(
-            child: Icon(
-              Icons.person,
-              size: 80,
-              color: Colors.white,
+          child: Container(
+            padding: const EdgeInsets.all(4), // Border thickness
+            decoration: const BoxDecoration(
+              shape: BoxShape.circle,
+            ),
+            child: ClipOval(
+              child: Image.asset(
+                'assets/profile_pic.png',
+                width: 192,
+                height: 192,
+                fit: BoxFit.cover,
+                errorBuilder: (context, error, stackTrace) {
+                  // Fallback to icon if image fails to load
+                  return Container(
+                    width: 192,
+                    height: 192,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: Colors.grey[800],
+                    ),
+                    child: const Center(
+                      child: Icon(
+                        Icons.person,
+                        size: 80,
+                        color: Colors.white,
+                      ),
+                    ),
+                  );
+                },
+              ),
             ),
           ),
         ),
