@@ -8,7 +8,9 @@ import 'package:mnwr_portfolio/Sections/Hero/widgets/stats_section.dart';
 import 'package:mnwr_portfolio/Sections/Hero/widgets/scroll_indicator.dart';
 
 class HeroSection extends StatefulWidget {
-  const HeroSection({super.key});
+  final Function(String)? onNavigate;
+
+  const HeroSection({super.key, this.onNavigate});
 
   @override
   State<HeroSection> createState() => _HeroSectionState();
@@ -79,12 +81,6 @@ class _HeroSectionState extends State<HeroSection>
           _buildMainContent(),
 
           // Scroll indicator at bottom
-          Positioned(
-            bottom: 30,
-            left: 0,
-            right: 0,
-            child: const ScrollIndicator(),
-          ),
         ],
       ),
     );
@@ -130,7 +126,7 @@ class _HeroSectionState extends State<HeroSection>
                 const SizedBox(height: 50),
 
                 // Action buttons
-                const ActionButtons(),
+                ActionButtons(onNavigate: widget.onNavigate),
                 const SizedBox(height: 80),
 
                 // Stats section

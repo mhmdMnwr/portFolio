@@ -2,7 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:mnwr_portfolio/constants.dart';
 
 class ActionButtons extends StatelessWidget {
-  const ActionButtons({super.key});
+  final Function(String)? onNavigate;
+
+  const ActionButtons({super.key, this.onNavigate});
 
   @override
   Widget build(BuildContext context) {
@@ -22,7 +24,10 @@ class ActionButtons extends StatelessWidget {
       cursor: SystemMouseCursors.click,
       child: GestureDetector(
         onTap: () {
-          // Add navigation functionality
+          // Navigate to projects section
+          if (onNavigate != null) {
+            onNavigate!('projects');
+          }
         },
         child: Container(
           padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 15),

@@ -3,15 +3,17 @@ import 'package:mnwr_portfolio/Sections/app%20bar/widget/actions.dart';
 import 'package:mnwr_portfolio/Sections/app%20bar/widget/title.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
-  CustomAppBar({super.key});
+  final Function(String)? onNavigate;
 
-  final List<Map<String, dynamic>> _menuItems = [
-    {'title': 'Home', 'function': () {}},
-    {'title': 'About', 'function': () {}},
-    {'title': 'Skills', 'function': () {}},
-    {'title': 'Projects', 'function': () {}},
-    {'title': 'Contact', 'function': () {}},
-  ];
+  CustomAppBar({super.key, this.onNavigate});
+
+  List<Map<String, dynamic>> get _menuItems => [
+        {'title': 'Home', 'function': () => onNavigate?.call('Home')},
+        {'title': 'About', 'function': () => onNavigate?.call('About')},
+        {'title': 'Skills', 'function': () => onNavigate?.call('Skills')},
+        {'title': 'Projects', 'function': () => onNavigate?.call('Projects')},
+        {'title': 'Contact', 'function': () => onNavigate?.call('Contact')},
+      ];
 
   @override
   Widget build(BuildContext context) {
