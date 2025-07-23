@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:mnwr_portfolio/constants.dart';
 
-class AboutSectionTitle extends StatelessWidget {
-  const AboutSectionTitle({super.key});
+class ProjectsSectionTitle extends StatelessWidget {
+  const ProjectsSectionTitle({super.key});
 
   @override
   Widget build(BuildContext context) {
     return ShaderMask(
-      shaderCallback: (bounds) => LinearGradient(
+      shaderCallback: (bounds) => const LinearGradient(
         colors: [
           Colors.blue,
           Colors.purple,
@@ -15,7 +15,7 @@ class AboutSectionTitle extends StatelessWidget {
         ],
       ).createShader(bounds),
       child: Text(
-        AboutConstants.sectionTitle,
+        ProjectsConstants.sectionTitle,
         style: TextStyle(
           fontSize: isMobile(context) ? 36 : 48,
           fontWeight: FontWeight.bold,

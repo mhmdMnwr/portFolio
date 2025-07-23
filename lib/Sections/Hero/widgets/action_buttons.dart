@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mnwr_portfolio/constants.dart';
 
 class ActionButtons extends StatelessWidget {
   const ActionButtons({super.key});
@@ -10,8 +11,8 @@ class ActionButtons extends StatelessWidget {
       runSpacing: 15,
       alignment: WrapAlignment.center,
       children: [
-        _buildPrimaryButton('View My Projects'),
-        _buildSecondaryButton('Download CV'),
+        _buildPrimaryButton(HeroConstants.viewProjectsButton),
+        _buildSecondaryButton(HeroConstants.downloadCvButton),
       ],
     );
   }

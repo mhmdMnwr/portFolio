@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mnwr_portfolio/constants.dart';
 
 class StudentBadge extends StatelessWidget {
   const StudentBadge({super.key});
@@ -22,7 +23,7 @@ class StudentBadge extends StatelessWidget {
           ),
           const SizedBox(width: 10),
           Text(
-            'Computer Science Student at ESI',
+            HeroConstants.studentBadgeText,
             style: TextStyle(
               color: Colors.blue,
               fontSize: 14,

@@ -3,6 +3,7 @@ import 'package:mnwr_portfolio/Sections/app%20bar/app_bar.dart';
 import 'package:mnwr_portfolio/Sections/Hero/hero_section.dart';
 import 'package:mnwr_portfolio/Sections/About/about_section.dart';
 import 'package:mnwr_portfolio/Sections/Skills/skills_section.dart';
+import 'package:mnwr_portfolio/Sections/Projects/projects_section.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,6 +23,7 @@ class _HomePageState extends State<HomePage> {
             HeroSection(),
             AboutSection(),
             SkillsSection(),
+            ProjectsSection(),
             // Add more sections here as needed
           ],
         ),

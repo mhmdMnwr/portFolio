@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mnwr_portfolio/theme/theme_provider.dart';
 
 class AppBarActions extends StatefulWidget {
   final VoidCallback? function;

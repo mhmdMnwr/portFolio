@@ -10,7 +10,7 @@ class EducationSection extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Education',
+          AboutConstants.educationTitle,
           style: TextStyle(
             color: Colors.white,
             fontSize: isMobile(context) ? 24 : 28,

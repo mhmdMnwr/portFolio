@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:mnwr_portfolio/constants.dart';
-import 'package:mnwr_portfolio/Sections/Hero/widgets/floating_buttons.dart';
 import 'package:mnwr_portfolio/Sections/Hero/widgets/student_badge.dart';
 import 'package:mnwr_portfolio/Sections/Hero/widgets/hero_title.dart';
 import 'package:mnwr_portfolio/Sections/Hero/widgets/hero_description.dart';
@@ -76,9 +75,6 @@ class _HeroSectionState extends State<HeroSection>
       decoration: _buildBackgroundDecoration(),
       child: Stack(
         children: [
-          // Floating action buttons
-          const FloatingButtons(),
-
           // Main content
           _buildMainContent(),
 

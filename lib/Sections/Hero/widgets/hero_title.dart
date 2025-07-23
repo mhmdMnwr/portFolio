@@ -15,7 +15,7 @@ class HeroTitle extends StatelessWidget {
         ],
       ).createShader(bounds),
       child: Text(
-        'Flutter Developer',
+        HeroConstants.mainTitle,
         style: TextStyle(
           fontSize: isMobile(context) ? 36 : 56,
           fontWeight: FontWeight.bold,

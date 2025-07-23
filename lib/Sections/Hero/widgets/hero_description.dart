@@ -9,7 +9,7 @@ class HeroDescription extends StatelessWidget {
     return Column(
       children: [
         Text(
-          'Learning to build beautiful mobile applications with ',
+          HeroConstants.descriptionPart1,
           style: TextStyle(
             color: Colors.grey[300],
             fontSize: isMobile(context) ? 16 : 18,
@@ -22,7 +22,7 @@ class HeroDescription extends StatelessWidget {
           text: TextSpan(
             children: [
               TextSpan(
-                text: 'Flutter',
+                text: HeroConstants.flutterText,
                 style: TextStyle(
                   color: Colors.blue,
                   fontSize: isMobile(context) ? 16 : 18,
@@ -31,7 +31,7 @@ class HeroDescription extends StatelessWidget {
                 ),
               ),
               TextSpan(
-                text: ' and ',
+                text: HeroConstants.descriptionConnector,
                 style: TextStyle(
                   color: Colors.grey[300],
                   fontSize: isMobile(context) ? 16 : 18,
@@ -39,7 +39,7 @@ class HeroDescription extends StatelessWidget {
                 ),
               ),
               TextSpan(
-                text: 'MongoDB',
+                text: HeroConstants.mongodbText,
                 style: TextStyle(
                   color: Colors.green,
                   fontSize: isMobile(context) ? 16 : 18,

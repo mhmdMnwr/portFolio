@@ -11,16 +11,16 @@ class StatsCards extends StatelessWidget {
       children: [
         _buildStatCard(
           icon: Icons.code,
-          number: '4 Apps',
-          label: 'Built',
+          number: AboutConstants.appsBuiltNumber,
+          label: AboutConstants.appsBuiltLabel,
           color: Colors.blue,
           context: context,
         ),
         const SizedBox(width: 20),
         _buildStatCard(
           icon: Icons.school,
-          number: '2 Years',
-          label: 'Learning',
+          number: AboutConstants.learningYearsNumber,
+          label: AboutConstants.learningYearsLabel,
           color: Colors.purple,
           context: context,
         ),

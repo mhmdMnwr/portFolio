@@ -12,12 +12,12 @@ class StatsSection extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              _buildStatItem('🎓', 'École Supérieure\nd\'Informatique'),
-              _buildStatItem('👨‍💻', '2 Years Learning'),
+              _buildStatItem('🎓', HeroConstants.schoolStatMobile),
+              _buildStatItem('👨‍💻', HeroConstants.experienceStat),
             ],
           ),
           const SizedBox(height: 30),
-          _buildStatItem('📱', '4 Apps Built'),
+          _buildStatItem('📱', HeroConstants.appsStat),
         ],
       );
     }
@@ -25,9 +25,9 @@ class StatsSection extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceEvenly,
       children: [
-        _buildStatItem('🎓', 'École Supérieure d\'Informatique'),
-        _buildStatItem('📱', '4 Apps Built'),
-        _buildStatItem('👨‍💻', '2 Years Learning'),
+        _buildStatItem('🎓', HeroConstants.schoolStat),
+        _buildStatItem('📱', HeroConstants.appsStat),
+        _buildStatItem('👨‍💻', HeroConstants.experienceStat),
       ],
     );
   }
