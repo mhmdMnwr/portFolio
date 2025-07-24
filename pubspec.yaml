@@ -34,6 +34,8 @@ dependencies:
   flutter_screenutil: ^5.9.3
   tailwind_colors: ^0.3.1
   url_launcher: ^6.3.1
+  path_provider: ^2.1.4
+  permission_handler: ^11.3.1
 
 dev_dependencies:
 
@@ -64,6 +66,7 @@ flutter:
     - assets/prayer time/
     - assets/portfolio/
     - assets/profile_pic.png
+    - assets/Ameur_Menouer_CV.pdf
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
   # For details regarding adding assets from package dependencies, see
