@@ -14,6 +14,7 @@ class ProjectDetailAppBar extends StatelessWidget
     return AppBar(
       backgroundColor: Colors.black.withOpacity(0.95),
       elevation: 2,
+      automaticallyImplyLeading: false,
       title: Text(
         title,
         style: const TextStyle(

@@ -84,21 +84,21 @@ class ProjectFeatures extends StatelessWidget {
           'Secure messaging between clients and craftsmen',
           'Job posting and proposal system',
           'Rating and review system',
-          'In-app payment integration',
+          'In-app switching between craftsmen and clients',
+          'User-friendly interface for easy navigation',
         ];
       case 'Madrassat Iqraa':
         return [
           'Student and teacher registration system',
-          'Class scheduling and management',
           'Financial transaction tracking',
           'Progress monitoring and reporting',
-          'Digital attendance system',
-          'Parent-teacher communication portal',
         ];
       case 'Dirassaty':
         return [
           'Real-time grade tracking',
           'Academic calendar integration',
+          'Tuition fee management',
+          'Absence and attendance tracking',
           'Parent-teacher messaging',
           'Assignment and homework tracking',
           'Attendance monitoring',
@@ -110,8 +110,7 @@ class ProjectFeatures extends StatelessWidget {
           'Qibla direction compass',
           'Daily adhkar and Islamic content',
           'Prayer time notifications',
-          'Islamic calendar integration',
-          'Customizable prayer reminders',
+          'Quizzes and educational content',
         ];
       case 'Portfolio Website':
         return [

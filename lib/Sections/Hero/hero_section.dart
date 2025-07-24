@@ -5,7 +5,6 @@ import 'package:mnwr_portfolio/Sections/Hero/widgets/hero_title.dart';
 import 'package:mnwr_portfolio/Sections/Hero/widgets/hero_description.dart';
 import 'package:mnwr_portfolio/Sections/Hero/widgets/action_buttons.dart';
 import 'package:mnwr_portfolio/Sections/Hero/widgets/stats_section.dart';
-import 'package:mnwr_portfolio/Sections/Hero/widgets/scroll_indicator.dart';
 
 class HeroSection extends StatefulWidget {
   final Function(String)? onNavigate;
