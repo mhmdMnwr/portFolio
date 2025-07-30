@@ -114,9 +114,12 @@ class SkillsConstants {
     'Material Design',
     'Cupertino',
     'State Management',
-    'Provider',
-    'Postman',
+    'bloc',
+    'Cubit'
+        'Postman',
     'GitHub',
+    'Clean Architecture'
+        'Animations',
     'Figma',
     'Android Studio',
   ];
